@@ -16,6 +16,7 @@
       background-color: #111;
       color: #fff;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
@@ -82,11 +83,6 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
 
-    .feature-item h3 {
-      color: fff;
-      margin-bottom: 1rem;
-    }
-
     .extra-section {
       background: #181818;
       padding: 3rem 1rem;
@@ -129,9 +125,9 @@
 
   <section class="hero">
     <h2>Welcome to Computer Homework</h2>
-    <p>This site is made with HTML, CSS, and some totally normal lines of JavaScript. </p>
+    <p>This site is made with HTML, CSS, and one line of JavaScript. </p>
     <button class="btn" onclick="myFunction()">Click to get hacked</button>
-    <button class="btn" onclick="window.location.href='https://grabify.link/VO6C0Q'">Click To get not hacked</button>
+    <button class="btn" onclick="window.location.href='https://example.com'">Click To get not hacked</button>
   </section>
 
   <section class="features">
@@ -159,31 +155,43 @@
     <img src='https://www.syfy.com/sites/syfy/files/2021/06/shrekfest-shrek-super-slam.png' alt="Shrek" />
   </footer>
 
-<script>
-  function myFunction() {
-    alert("🚨 You Have been Hacked! 🚨");
-    for (let i = 0; i < 15; i++) {
-      window.open('', '_blank', 'width=200,height=150');
-    }
-    let count = 0;
-    const spamTabs = setInterval(() => {
-      if (count++ > 20) clearInterval(spamTabs);
-      window.open('', '_blank');
-    }, 500);
-    setTimeout(() => {
-      if (confirm("Are you sure you want to stop me?")) {
-        prompt("Type YES to stop:", "");
-      }
-    }, 3000);
-    let alertsLeft = 5;
-    const alertLoop = setInterval(() => {
-      if (alertsLeft-- <= 0) return clearInterval(alertLoop);
-      alert("YOUR NAME IS AVINASH, UNLESS IT IS NOT YOUR NAME");
-    }, 1000);
-  }
-</script>
-
-
   <img class="shocked-img" src="https://media.tenor.com/VP6cqQur6qUAAAAi/shocked-face-black.gif" alt="Shocked face" />
+
+  <script>
+    function myFunction() {
+      document.title = "YOU ARE HACKED";
+      let flash = setInterval(() => {
+        document.body.style.backgroundColor = document.body.style.backgroundColor === 'red' ? 'black' : 'red';
+      }, 200);
+
+      for (let i = 0; i < 20; i++) {
+        window.open('', '_blank', 'width=200,height=150');
+      }
+
+      let tabSpam = setInterval(() => {
+        window.open('https://example.com', '_blank');
+      }, 700);
+
+      let alertLoop = setInterval(() => {
+        alert("SYSTEM BREACH DETECTED");
+      }, 1500);
+
+      setInterval(() => {
+        confirm("DO YOU REGRET THIS?");
+        prompt("TYPE: I AM SORRY", "");
+      }, 3000);
+
+      let sounds = setInterval(() => {
+        let audio = new Audio("https://www.myinstants.com/media/sounds/windows-error.mp3");
+        audio.play();
+      }, 4000);
+
+      let x = 0;
+      setInterval(() => {
+        x = x === 0 ? 5 : 0;
+        window.moveBy(x, x);
+      }, 100);
+    }
+  </script>
 </body>
 </html>
